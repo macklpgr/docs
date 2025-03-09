@@ -4,8 +4,8 @@
   "name": "Byword explained",
   "colors": {
     "primary": "#357CFF",
-    "light": "#07C983",
-    "dark": "#E2EFFF"
+    "light": "#7aaaff",
+    "dark": "#295fc0"
   },
   "favicon": "/favicon.svg",
   "navigation": {
