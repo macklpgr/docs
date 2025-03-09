@@ -5,7 +5,7 @@
   "colors": {
     "primary": "#357CFF",
     "light": "#07C983",
-    "dark": "#15803D"
+    "dark": "#E2EFFF"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -83,7 +83,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:mack@byword.ai"
       }
     ],
     "primary": {
