@@ -14,24 +14,82 @@
         "tab": "How to use Byword",
         "groups": [
           {
-            "group": "Get started",
+            "group": "Get Started",
             "pages": [
               "get-started/introduction",
               "get-started/quickstart",
-              "get-started/plans"
+              "get-started/your-account"
             ]
           },
           {
-            "group": "The basics",
+            "group": "The Basics",
             "pages": [
               "basics/creating-content",
               {
                 "group": "Article settings",
                 "pages": [
-                  "basics/article-settings/languages"
+                  "basics/article-settings/languages",
+                  "basics/article-settings/article-length",
+                  "basics/article-settings/writing-style",
+                  "basics/article-settings/images"
                 ]
               },
-              "basics/documents"
+              {
+                "group": "Advanced settings",
+                "pages": [
+                  "basics/advanced-settings/ctas",
+                  "basics/advanced-settings/custom-prompts",
+                  "basics/advanced-settings/internal-linking",
+                  "basics/advanced-settings/model"
+                ]
+              },
+              "basics/documents",
+              "basics/research",
+              {
+                "group": "Google Search Console",
+                "pages": [
+                  "basics/google-search-console/indexing",
+                  "basics/google-search-console/performance"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "pages": [
+                  "basics/integrations/wordpress",
+                  "basics/integrations/webflow",
+                  "basics/integrations/csv",
+                  "basics/integrations/zapier",
+                  "basics/integrations/shopify",
+                  "basics/integrations/api"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Programmatic",
+            "pages": [
+              "programmatic/introduction",
+              "programmatic/templates",
+              "programmatic/datasets",
+              "programmatic/creating-articles",
+              "programmatic/faqs"
+            ]
+          },
+          {
+            "group": "Advanced Features",
+            "pages": [
+              "advanced/unlimited",
+              {
+                "group": "Content tools",
+                "pages": [
+                  "advanced/content-tools/write-from-urls",
+                  "advanced/content-tools/write-from-sitemap",
+                  "advanced/content-tools/glossary",
+                  "advanced/content-tools/lists",
+                  "advanced/content-tools/programmatic-builder"
+                ]
+              }
+              
             ]
           }
         ]
