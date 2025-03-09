@@ -11,31 +11,28 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "How to use Byword",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Get started",
             "pages": [
-              "introduction",
-              "quickstart",
-              "development"
+              "get-started/introduction",
+              "get-started/quickstart",
+              "get-started/plans"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "The basics",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "basics/creating-content",
+              "basics/article-settings",
+              "basics/documents"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "SEO Strategy",
         "groups": [
           {
             "group": "API Documentation",
