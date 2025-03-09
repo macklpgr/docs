@@ -25,7 +25,12 @@
             "group": "The basics",
             "pages": [
               "basics/creating-content",
-              "basics/article-settings",
+              {
+                "group": "Article settings",
+                "pages": [
+                  "basics/article-settings/languages"
+                ]
+              },
               "basics/documents"
             ]
           }
