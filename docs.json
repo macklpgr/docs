@@ -117,7 +117,7 @@
     ]
   },
   "logo": {
-    "light": "/logoA",
+    "light": "/logoA.svg",
     "dark": "/logo/dark.svg"
   },
   "navbar": {
