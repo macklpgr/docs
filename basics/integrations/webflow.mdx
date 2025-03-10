@@ -1,5 +1,135 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: 'Webflow'
+description: 'Connect Byword to your Webflow CMS collections'
+icon: 'font-awesome'
 ---
 
+Byword's Webflow integration enables automatic syncing of your AI-generated content directly to Webflow CMS collections. This streamlines your content workflow by eliminating manual copy-pasting between platforms.
+
+## Integration setup
+
+Setting up the Webflow integration involves three main steps:
+
+### Step 1: Provide an API key
+
+1. Navigate to the [Webflow integration page](https://byword.ai/integrate-webflow) in your Byword account
+
+2. You'll be prompted to enter your site's API key
+
+3. To find your API key:
+
+   * Go to your Webflow dashboard
+
+   * Navigate to the site settings
+
+   * Open the Integrations tab
+
+   * Generate a token under API Access
+
+<Warning>
+  Webflow will not display your API key again after generation. Save it securely or be prepared to generate a new one if needed.
+</Warning>
+
+1. Enter your API key in Byword and click "Verify"
+
+### Step 2: Choose your CMS collection
+
+After verifying your API key:
+
+1. Select which CMS collection you want to sync your articles to
+
+2. For most sites, this will be the collection used for blog posts
+
+3. Byword will display your site name in italics to confirm the connection
+
+### Step 3: Configure CMS settings
+
+Finally, configure how Byword should interact with your Webflow CMS:
+
+#### Live site status
+
+Choose where your content should be published:
+
+* **Post to staging only**: Content will only be visible in your Webflow Editor until manually published (default)
+
+* **Post to live site**: Content will be published directly to your live site
+
+#### Field mapping
+
+This critical section tells Byword which Webflow fields correspond to:
+
+1. **Article Title**: Automatically mapped to the default "Name" field in Webflow
+
+2. **Article Body**: Must be mapped to a rich text field (required)
+
+3. **Meta Description**: Can be mapped to any text field (optional)
+
+4. **Image**: Can be mapped to an image field (optional)
+
+<Info>
+  Only the Article Body mapping is required. Meta description and image mappings are optional but recommended for complete content.
+</Info>
+
+## Working with your integration
+
+### Automatic syncing
+
+Once set up, new articles will automatically sync to your Webflow collection as they're generated in Byword.
+
+### Manual syncing
+
+You can also manually sync articles to Webflow in two ways:
+
+#### For individual articles:
+
+1. Go to "My Content" in Byword
+
+2. Select the articles you want to sync
+
+3. Click the integration button in the top right of the page
+
+#### For entire campaigns:
+
+1. Navigate to any campaign page in "My Content"
+
+2. Click the Webflow button (or "Sync to Site" if you have multiple integrations)
+
+3. This will sync the entire campaign to Webflow
+
+<Warning>
+  Manual syncs cannot be paused or canceled once started. The process takes approximately 1-2 seconds per article.
+</Warning>
+
+## Best practices
+
+For optimal results with the Webflow integration:
+
+1. **Field structure**: Ensure your Webflow collection has appropriate fields (rich text, plain text, image) before setting up the integration
+
+2. **Staging first**: Initially use the "Post to staging only" option to verify content appears correctly
+
+3. **Image handling**: If using images, verify they're being properly uploaded and displayed
+
+4. **Content verification**: After initial sync, check that formatting is preserved correctly in Webflow
+
+## Troubleshooting
+
+If your Webflow integration isn't working as expected:
+
+* Verify your API key is still valid
+
+* Ensure the selected CMS collection exists and is correctly configured
+
+* Check field mappings correspond to the right field types
+
+* For persistent issues, try resetting the integration using the "Reset" button at the top of the page
+
+## Reconnecting or changing settings
+
+If you need to change your integration settings:
+
+1. Click the "Reset" button at the top of the Webflow integration page
+
+2. You'll be guided through the setup process again
+
+3. This allows you to change your API key, collection, or field mappings

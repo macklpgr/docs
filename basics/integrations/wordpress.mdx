@@ -1,5 +1,115 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: 'WordPress'
+description: 'Sync your Byword content directly to WordPress'
+icon: 'wordpress'
 ---
 
+Byword's WordPress integration automatically syncs articles to your WordPress site, streamlining your content publishing workflow. This integration lets you control post status, authorship, categorization, and scheduling with minimal setup.
+
+## Setting up the integration
+
+You can set up and manage your WordPress integration by visiting the [integrations page](https://byword.ai/integrations/wordpress) in your Byword account.
+
+## Configuration options
+
+### Post status
+
+Choose what status you'd like your posts to have when they're sent to WordPress:
+
+* **Draft**: Articles will be saved as drafts, requiring manual review before publishing
+
+* **Pending**: Articles will be submitted for review
+
+* **Publish**: Articles will be immediately published and visible to visitors
+
+### Author selection
+
+Specify which WordPress user should be set as the author for your Byword-generated content. Make sure the selected user has appropriate posting permissions in your WordPress site.
+
+### Categories and tags
+
+You can pre-assign categories and tags to all content sent from Byword:
+
+1. Select from your existing WordPress categories
+
+2. Add specific tags to apply to all synced content
+
+3. Add as many categories and tags as needed
+
+## Scheduling options
+
+Byword offers two scheduling modes that affect how the date field is set on posts sent to WordPress:
+
+### Publish articles immediately
+
+This option sends articles to WordPress with no date field. Your WordPress site will set the date to the current time. If your Post Status is set to Publish, the post will immediately be visible on your site.
+
+### Schedule articles to publish over time
+
+This option allows you to specify a maximum timeframe (between 3 and 180 days) for publishing your content. Byword will:
+
+* Randomly assign each post a publishing date within your specified timeframe
+
+* Schedule all posts at least 24 hours in advance
+
+* Distribute posts evenly across the period (particularly useful for large batch generations)
+
+<Info>
+  When using scheduling mode with Post Status set to "Publish," your posts won't publish immediately but will be scheduled for their assigned future date.
+</Info>
+
+## Pages mode
+
+Byword supports creating WordPress pages in addition to posts. To use this feature:
+
+1. Change the Integration Mode setting to "Pages" at the top of the integration page
+
+2. Configure page-specific settings:
+
+   * **Parent page**: Optionally set a parent page for your generated content
+
+   * **Page template**: Select which template you'd like applied to new pages
+
+<Warning>
+  When using pages mode for the first time, verify that the templates shown in Byword match those available in your WordPress theme. Some themes may display templates in Byword that aren't actually available, which can cause integration errors.
+</Warning>
+
+## Manual syncing
+
+You can manually sync articles that weren't automatically sent to WordPress:
+
+### For individual articles
+
+1. Go to "My Content"
+
+2. Select the articles you want to sync
+
+3. Click the integration button in the top right of the page
+
+### For entire campaigns
+
+1. Navigate to any campaign page inside "My Content"
+
+2. Click the WordPress button at the top of the page (may appear as "Sync to Site" if you have multiple integrations)
+
+<Info>
+  Manual syncs cannot be paused or canceled once started and take approximately 1-2 seconds per article.
+</Info>
+
+## Troubleshooting
+
+Most WordPress integration issues stem from server/hosting settings or security plugins. If you're experiencing problems:
+
+1. Check if there are server settings preventing access to your WordPress REST API
+
+2. Review security plugins (especially Wordfence) that might block application passwords or external API access
+
+3. Verify you don't have a custom `/wp-admin/` URL structure, which can prevent integration
+
+Common issues include:
+
+* **404 errors during integration**: Usually caused by Byword incorrectly guessing your site's URL structure
+
+* **Application password errors**: Often caused by security plugins blocking application password creation
+
+If you continue experiencing issues, try disabling security plugins temporarily during setup or contacting your WordPress developer.

@@ -1,5 +1,113 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: 'CSV Exports'
+description: 'Export your Byword articles in bulk for external processing'
+icon: 'file-csv'
 ---
 
+Byword allows you to export your generated content in bulk as CSV files. This provides flexibility for using your AI-generated content in external systems, content management platforms, or for offline storage and analysis.
+
+## Export capabilities
+
+Each CSV export contains comprehensive data for your selected articles:
+
+- Article titles
+- Full article content
+- Meta descriptions
+- Image URLs
+- Generation dates
+- All associated metadata
+
+## Content formats
+
+CSV exports include your content in multiple formats to accommodate different needs:
+
+- **HTML**: Complete with formatting tags for direct web publishing
+- **Markdown**: Perfect for platforms that support markdown
+- **Plaintext**: Clean text without formatting for maximum compatibility
+
+This multi-format approach gives you flexibility when importing to different systems.
+
+## How to export content
+
+There are two primary methods for exporting your Byword content as CSVs:
+
+### Method 1: Export selected articles
+
+To export specific articles:
+
+1. Navigate to your "My Content" page
+2. Select individual articles by checking the boxes next to them
+3. Click the "Download" button at the top of the section
+4. A CSV file containing only your selected articles will be generated and downloaded
+
+### Method 2: Export entire campaigns
+
+To export all articles in a campaign:
+
+1. Navigate to your "My Content" page
+2. Locate the campaign you want to export
+3. Click the "Download" button next to the campaign name
+4. A CSV file containing all articles in that campaign will be generated and downloaded
+
+<Tip>
+  Campaign exports are ideal for backing up entire content campaigns or transferring complete datasets to other platforms.
+</Tip>
+
+## CSV structure
+
+The exported CSV includes data for:
+
+- The article headline
+- The article meta description
+- The full article in HTML format
+- The full article in Markdown format
+- The full article in plain text
+- Link to the generated header image
+- When the article was created
+- Which campaign the article belongs to
+- The keyword used to generate the article
+
+## Working with exported CSVs
+
+### Importing to content platforms
+
+The multi-format content allows you to choose the best format for your target platform:
+
+- Use HTML for direct import to most CMSs
+- Use Markdown for platforms like Ghost or Jekyll
+- Use Plaintext as a base for custom formatting
+
+### Spreadsheet compatibility
+
+When opening CSV exports in spreadsheet applications:
+
+<Warning>
+  Users sometimes experience character encoding issues when saving CSVs in Excel and then importing into Google Sheets. If you notice unexpected characters in your exported articles, try re-downloading and importing directly to your final tool.
+</Warning>
+
+For best results:
+
+- Import directly to your final tool when possible
+- Use UTF-8 encoding settings when opening in Excel
+- Consider using specialized CSV editors for large exports
+
+## Bulk processing
+
+The CSV format makes it easy to:
+
+- Add additional metadata columns
+- Apply bulk changes to content
+- Filter articles based on criteria
+- Sort and organize content
+- Prepare content for import to specialized platforms
+
+## Use cases
+
+Common ways to use CSV exports:
+
+- Creating content backups
+- Migrating content between platforms
+- Analyzing content metrics and patterns
+- Preparing content for manual review before publishing
+- Sharing content with team members without Byword access
+- Bulk importing to custom CMS platforms
