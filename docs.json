@@ -55,9 +55,9 @@
               {
                 "group": "Integrations",
                 "pages": [
+                  "basics/integrations/csv",
                   "basics/integrations/wordpress",
                   "basics/integrations/webflow",
-                  "basics/integrations/csv",
                   "basics/integrations/zapier",
                   "basics/integrations/shopify",
                   "basics/integrations/api"
