@@ -1,5 +1,141 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: 'Automatic Indexing'
+description: 'Let Byword handle your Google indexing for you'
+icon: 'robot'
 ---
 
+Once you've connected Byword to Google Search Console, you can have Byword automatically index your content for you. This speeds up how quickly Google finds and ranks your new content.
+
+## What is indexing, and why is this important?
+
+Just because Google has found your site's content doesn't mean it'll actually appear in search results. For your content to appear on results pages and start generating traffic, it needs to be indexed.
+
+Getting your content indexed can be a lengthy process, especially for newer sites. Byword helps accelerate this process by connecting with the Google Indexing API, allowing your content to start receiving traffic as quickly as possible.
+
+<Warning>
+  This is an advanced Byword feature that requires careful setup. Please follow all steps below carefully.
+</Warning>
+
+## Setup process
+
+### Step 1: Create a Google Cloud Project
+
+To get started, first head to Google Cloud Platform and create a new project.![](/images/image\(6\).avif)
+
+### Step 2: Enable required APIs
+
+Next, you'll need to enable two APIs. Visit each link and click "Enable":
+
+* The [Web Search Indexing API](https://console.cloud.google.com/apis/library/indexing.googleapis.com)
+
+* The [Search Console API](https://console.cloud.google.com/apis/library/searchconsole.googleapis.com)
+
+  ![](/images/image\(5\).avif)
+
+### Step 3: Create a service account
+
+We'll then head to the [service accounts page](https://console.cloud.google.com/iam-admin/serviceaccounts), and create a new service account.
+
+![](/images/image\(4\).avif)
+
+Fill out the details on the following page. These don't affect functionality - just use details that make sense to you.
+
+![](/images/image\(3\).avif)
+
+You may be asked to fill in two optional steps around granting access. You can skip both of these and hit 'Done'.
+
+### Step 4: Create a JSON key
+
+In your service account dashboard:
+
+1. Click the dots next to your newly created service account
+
+2. Hit "Manage Keys"
+
+3. Click "Create new key"
+
+4. Make sure JSON is selected, and hit "Create"
+
+This will create and download a key file that we'll use in Byword.
+
+![](/images/image\(43\).png)
+
+![](/images/image\(2\).avif)
+
+![](/images/image\(1\).avif)
+
+### Step 5: Add service account to Search Console
+
+The final setup step is to:
+
+1. Take the email that was associated with your service account (e.g., `byword-indexing@byword.iam.gserviceaccount.com`)
+
+2. Add it to your Search Console as an Owner
+
+3. You can do this by heading to [Search Console](https://search.console.google.com) and clicking "Add User"
+
+<Warning>
+  Note that Owner permissions are required for indexing to work.
+</Warning>
+
+![](/images/image.avif)![](/images/image\(42\).png)
+
+### Step 6: Configure Byword
+
+Now you're ready to:
+
+1. Head back to the Byword [indexing dashboard](https://byword.ai/indexing)
+
+2. Upload the JSON key that was downloaded earlier
+
+3. Authenticate with your sites
+
+Byword will run a quick check to make sure everything has worked correctly, and then you'll be able to enable automatic indexing.
+
+## How it works and limitations
+
+When you have automatic indexing enabled, Byword will submit URLs from your site's sitemaps to Google's indexing API on a daily basis. There are a few important things to understand:
+
+### Indexing quotas
+
+* Google has a limit of 200 URLs per day, per Google Cloud Project
+
+* If you only have one site using this feature, Byword will index 200 URLs per day
+
+* If you have multiple sites using the same key, Byword will evenly distribute your quota (e.g., 4 sites = 50 URLs per site per day)
+
+* You can create multiple Google Cloud projects (with separate service accounts and keys) to increase your quota
+
+### Plan requirements
+
+* Automatic indexing requires a Byword subscription
+
+* The starter plan allows indexing a single site
+
+* All other plans allow indexing an unlimited number of sites
+
+### Important notes
+
+<Info>
+  Byword submitting a URL to the indexing API is not a guarantee that the URL will get indexed. However, it significantly increases the probability and decreases the timeframe for indexing.
+</Info>
+
+## Frequently asked questions
+
+<Accordion title="How many pages can I index a day?">
+  Google limits each project to 200 URL submissions per day. If you need to index more URLs daily, you can create multiple Google Cloud projects by following the setup steps again for each new project.
+</Accordion>
+
+<Accordion title="Does this only work on my Byword articles?">
+  No, Byword's automatic indexing works with any URLs in your sitemap. This means you can use it for both Byword-generated content and any other content on your site.
+</Accordion>
+
+<Accordion title="Why haven't any of my URLs been submitted for indexing yet?">
+  Byword processes indexing requests on a daily schedule. If you've just set up automatic indexing, please allow 24 hours for the first batch of URLs to be submitted. If no URLs have been submitted after 24 hours, check that:
+
+  1. Your service account has Owner permissions in Search Console
+
+  2. The JSON key was uploaded correctly
+
+  3. Your sitemap contains URLs that need indexing
+</Accordion>

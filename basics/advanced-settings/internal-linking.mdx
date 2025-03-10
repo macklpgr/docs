@@ -1,5 +1,119 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: 'Internal Linking'
+description: 'Automatically connect your content with relevant pages on your site'
+icon: 'link'
 ---
 
+[Internal linking](https://byword.ai/sitemaps) is a powerful SEO feature that allows Byword to automatically connect your new content with existing pages on your website. This creates a more cohesive user experience and helps search engines understand your site structure.
+
+## How internal linking works
+
+When enabled, Byword analyzes your website's existing content through your sitemap and intelligently inserts relevant links to your pages within newly generated content. This mimics how human writers naturally reference related content across your site.
+
+<Info>
+  Internal linking is an advanced feature that works best with well-structured websites containing descriptive URLs. Please review the usage requirements before implementation.
+</Info>
+
+## Setting up internal linking
+
+### Step 1: Add your sitemap
+
+1. Navigate to the [Internal Linking page](https://byword.ai/sitemaps) in your Byword dashboard
+
+2. Enter your sitemap URL (e.g., [`https://example.com/sitemap.xml`)](https://example.com/sitemap.xml\))
+
+3. Configure any URL filtering rules (optional)
+
+4. Click "Scan Sitemap"
+
+<Accordion title="URL filtering options">
+  **URL must contain:** Limit which URLs Byword considers by specifying path patterns
+
+  Examples:
+
+  * `/blog/` (only include blog posts)
+
+  * `/products/,/services/` (include products and services pages)
+
+  **URL must not contain:** Exclude irrelevant pages
+
+  Examples:
+
+  * `/contact/,/support/,/login/` (exclude utility pages)
+
+  * `/checkout/` (exclude transaction pages)
+</Accordion>
+
+### Step 2: Index your sitemap
+
+After scanning, you'll see a summary of detected URLs. Review this list to ensure your filters worked as expected, then:
+
+1. Click "Index Sitemap" to begin the indexing process
+
+2. Byword will crawl and analyze each page, which may take time depending on volume
+
+3. Once complete, your sitemap will appear in your internal linking dashboard
+
+<Warning>
+  Byword samples large sitemaps to manage processing costs:
+
+  * Standard plans: Up to 2,500 URLs
+
+  * Unlimited plans: Up to 5,000 URLs
+
+  For larger sitemaps, Byword randomly samples URLs that match your filtering criteria.
+</Warning>
+
+### Step 3: Configure linking settings
+
+After indexing, you can configure how Byword uses your sitemap:
+
+* **Maximum links per article:** Set an upper limit (default is 5)
+
+* **Active sitemap:** Choose which sitemap to use if you have multiple
+
+* **Custom linking rules:** Create specific keyword-to-URL mapping rules
+
+## Custom linking rules
+
+For precise control over your internal linking, you can create custom rules that specify which keywords should link to particular URLs.
+
+### Creating custom rules
+
+1. Enter a keyword or phrase (e.g., "content marketing")
+
+2. Enter the destination URL (e.g., [`https://example.com/services/content-marketing`)](https://example.com/services/content-marketing\))
+
+3. Click "Add Rule"
+
+### Advanced rule options
+
+* **Multiple keywords per rule:** Click on an existing rule to add multiple keywords that should link to the same URL
+
+* **Prioritization:** Custom rules take precedence over similarity-based linking
+
+* **Semantic matching:** Byword automatically matches variations of your keywords (plurals, related terms)
+
+## Usage requirements and best practices
+
+For optimal results with internal linking:
+
+### Ideal sitemap characteristics
+
+* **Adequate size:** At least 100 relevant URLs for meaningful linking
+
+* **Descriptive URLs:** Use semantic URLs that describe page content
+
+  * ✅ Good: `example.com/how-to-bake-bread`
+
+  * ❌ Poor: `example.com/post/13412`
+
+* **Diverse content:** Include a variety of content types relevant to your topic areas
+
+### Implementation considerations
+
+* **Testing:** Start with a small batch of articles to evaluate link quality
+
+* **Programmatic content:** Be cautious when including programmatic URLs to avoid circular linking
+
+* **Link relevance:** Monitor generated content to ensure links are contextually appropriate
