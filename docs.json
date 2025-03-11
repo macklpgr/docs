@@ -97,18 +97,13 @@
         "tab": "SEO Strategy",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "The basics",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "seo-strategy/ai-changing",
+              "seo-strategy/choosing-inputs",
+              "seo-strategy/n-dimensional-seo",
+              "seo-strategy/rank-first-edit-second",
+              "seo-strategy/will-google-penalise-me"
             ]
           }
         ]
