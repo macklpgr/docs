@@ -27,6 +27,7 @@
               "basics/creating-content",
               {
                 "group": "Article settings",
+                "icon": "settings",
                 "pages": [
                   "basics/article-settings/languages",
                   "basics/article-settings/article-length",
@@ -36,6 +37,7 @@
               },
               {
                 "group": "Advanced settings",
+                "icon": "sliders",
                 "pages": [
                   "basics/advanced-settings/ctas",
                   "basics/advanced-settings/custom-prompts",
@@ -47,6 +49,7 @@
               "basics/research",
               {
                 "group": "Google Search Console",
+                "icon": "search",
                 "pages": [
                   "basics/google-search-console/indexing",
                   "basics/google-search-console/performance"
@@ -54,6 +57,7 @@
               },
               {
                 "group": "Integrations",
+                "icon": "plug",
                 "pages": [
                   "basics/integrations/csv",
                   "basics/integrations/wordpress",
@@ -80,6 +84,7 @@
               "advanced/unlimited",
               {
                 "group": "Content tools",
+                "icon": "tool",
                 "pages": [
                   "advanced/content-tools/write-from-urls",
                   "advanced/content-tools/write-from-sitemap",
@@ -88,7 +93,6 @@
                   "advanced/content-tools/programmatic-builder"
                 ]
               }
-              
             ]
           }
         ]
