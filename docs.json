@@ -27,7 +27,7 @@
               "basics/creating-content",
               {
                 "group": "Article settings",
-                "icon": "settings",
+                "icon": "pencil",
                 "pages": [
                   "basics/article-settings/languages",
                   "basics/article-settings/article-length",
@@ -49,7 +49,7 @@
               "basics/research",
               {
                 "group": "Google Search Console",
-                "icon": "search",
+                "icon": "globe",
                 "pages": [
                   "basics/google-search-console/indexing",
                   "basics/google-search-console/performance"
@@ -57,7 +57,7 @@
               },
               {
                 "group": "Integrations",
-                "icon": "plug",
+                "icon": "link",
                 "pages": [
                   "basics/integrations/csv",
                   "basics/integrations/wordpress",
@@ -84,7 +84,7 @@
               "advanced/unlimited",
               {
                 "group": "Content tools",
-                "icon": "tool",
+                "icon": "wrench",
                 "pages": [
                   "advanced/content-tools/write-from-urls",
                   "advanced/content-tools/write-from-sitemap",
