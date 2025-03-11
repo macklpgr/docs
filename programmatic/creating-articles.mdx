@@ -1,5 +1,70 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: 'Creating programmatic articles'
+description: 'Putting it all together'
+icon: 'play'
 ---
 
+The process of generating your programmatic content is touched on at various other points in the documentation - this article simply looks at the generation screen in isolation and walks you through each part of it.
+
+## Before You Generate
+
+In order to generate Programmatic Content, you'll need two things:
+
+### A Template
+
+You need a template from which to generate your articles. You can create one [here](/templates), and once it appears in your account you'll be able to hit the Generate button next to it.
+
+\[image]
+
+### A Dataset
+
+Datasets are what let us turn templates into articles. They don't need to be complex (you can see a very basic one [here](/datasets)), but you'll need to [create a dataset](/datasets) to connect your template before you get to generating.
+
+Once you have these two things, you're good to go.
+
+You don't need to create any documents in order to generate articles. They can be extremely helpful, and a nice addition, but they are entirely optional.
+
+## The Generation Screen
+
+Once you have the items above, and click Generate next to a template, you'll be taken to the generation screen where you'll see the following.
+
+\[image]
+
+Start by giving your project a name. This functions exactly the same as project names in the Batch Generator - it won't affect your articles and is simply so you can identify your project.
+
+Next, choose which dataset you'd like to connect your template to. This should typically be one with the same number of columns as you have variables in your template.
+
+\[image]
+
+Once you've selected a dataset, you'll be able to map the variables in your template to your dataset:
+
+\[image]
+
+Click on the dropdown for each dataset variable, and map it appropriately.
+
+This screenshot is based on example 2 in our datasets tutorial.
+
+What we're essentially doing here is telling Byword: Whenever the {location} variable appears in my template, I want that to be mapped to a value of 'Country' in my dataset. Similarly, I want {plant} to be mapped to the corresponding value of 'Plant'.
+
+If you have documents in your account, and that are ready to be used, you'll see the ability to associate them with your project.
+
+\[image]
+
+See the Documents page for more details
+
+Documents are entirely optional, and if you haven't [created any yet](/documents) or can't see this box, then don't worry!
+
+Regardless of whether or not you can see this box, you'll be able to see the option to create your project and begin generating articles.
+
+\[image]
+
+Check that the number of articles is as expected.
+It should equal the number of rows within your selected dataset.
+
+Pressing generate will take you to the project screen, where you'll be able to see your articles generate in real-time.
+
+<Note>
+  Please note that Unlimited users will be able to generate as many articles as they wish.
+
+  Regular users will need to have the required number of credits in their account prior to being able to generate articles. This can be checked at the bottom of the left hand sidebar, and topped up on the [Billing page](/billing).
+</Note>

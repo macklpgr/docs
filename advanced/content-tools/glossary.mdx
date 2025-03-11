@@ -1,5 +1,101 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: 'Glossary builder'
+description: 'Generate topical authority in your area'
+icon: 'book'
 ---
 
+Byword's [glossary builder](/glossary-builder) allows you to quickly and easily put together glossaries, growing your site's topical authority and traffic in the process.
+
+## How do I use it?
+
+Head to the glossary builder page, and choose which mode you'd like to use.
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <div className="border rounded-lg p-4">
+    <h3>Domain Mode</h3>
+    <p>Enter your domain or site URL, and Byword will start by suggesting some possible topics to generate a glossary on.</p>
+  </div>
+  <div className="border rounded-lg p-4">
+    <h3>Topic Mode</h3>
+    <p>Enter a topic for your glossary, and Byword will help you get started with a list of possible terms</p>
+  </div>
+  <div className="border rounded-lg p-4">
+    <h3>Terms Mode</h3>
+    <p>The manual approach - simply paste in a list of glossary terms that you've already prepared.</p>
+  </div>
+</div>
+
+Regardless of which mode you choose, you should eventually end up with a screen that looks like this, with your terms listed out.
+
+[image]
+
+Once you've reached this stage, there are several actions which you can choose to take:
+
+### Delete a term
+To delete a term from the list, simply click on it.
+
+### Delete all terms
+To delete all of your terms, and start again, click on the 'Restart' button.
+
+### Copy all terms
+If you'd like to copy your terms, perhaps to export them to another app, click 'Copy'.
+
+### Add a term
+To add a single term at a time, enter it into the input box, and click 'Add Term'.
+
+### Bulk add terms
+If you'd like to add multiple terms at once, click on 'Bulk Add'.
+
+### Suggest new terms
+If you'd like Byword to suggest new terms, based on what you've already added, click 'Auto-Expand'.
+
+## Generating your glossary articles
+
+Once you've finished editing your glossary terms, you can head to the bottom of the page and customize some of your project-level settings:
+
+[image]
+
+### Glossary topic
+
+This is a brief description of your glossary topic, to give Byword context when it's writing your articles. This helps Byword to disambiguate between possible contexts. For example, a glossary on 'current' with the topic 'electricity' would lead to a different article to what you'd get with the topic 'rivers'.
+
+### Glossary name
+
+This is a purely cosmetic field, and determines how your project will appear inside of Byword - just name it something that makes sense to you!
+
+### Title structure
+
+This determines the titles of your articles, to keep them consistent. It must contain the string `{term}` (this is where Byword inserts the term into). Byword generally recommends a title structure such as `{term}: Gardening Explained` or `{term}: Guide to Gardening` (where you can swap 'Gardening' for your own glossary topic).
+
+### Glossary focus
+
+This is an optional field which allows you to provide more instruction or tailoring to Byword. The focus should begin with 'focus on... '
+
+Good examples of how to write a focus are:
+
+- focus on how these concepts apply to UK law
+  (for a glossary about law)
+- focus on showing recipes which use these ingredients
+  (for a glossary on italian cooking)
+
+Once you've sorted your settings, you're ready to hit Generate!
+
+## FAQs
+
+<Accordion title="Why can't I control the article length?">
+  Glossaries are handled in a different way inside of Byword, which doesn't allow for control over length. This is designed to ensure that the glossary aptly covers the amount of information available on the topic, rather than forcing in content to meet a desired length.
+  
+  Byword aims to write glossary articles of around 1,500 words, but this can vary significantly depending on inputs. If you need precise control over length, then you may wish not to use this feature.
+</Accordion>
+
+<Accordion title="Why can't I add custom prompts?">
+  The intended effect of custom prompts is already handled by the glossary focus. You should use this field to capture the most important parts of your prompts, which are relevant to the glossary at hand.
+</Accordion>
+
+<Accordion title="Can I use custom writing styles with a glossary?">
+  Unfortunately not - custom writing styles won't apply to glossary articles.
+</Accordion>
+
+<Accordion title="How much does this cost?">
+  The glossary builder is totally free to use up to the point of article generation, at which point it requires 1 credit per article, just the same as regular Byword.
+</Accordion>

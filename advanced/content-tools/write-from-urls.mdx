@@ -1,5 +1,93 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: 'Write from URL'
+description: "Generate articles based off of your competitors' URLs"
+icon: 'link'
 ---
 
+This is a new custom format, which lets you create Byword articles based on competitor URLs. You can access it [here](/write-from-url).
+
+## How does it work?
+
+First, you'll have to input one or more competitor URLs into the input box at the top of the screen.
+
+\[image]
+
+The URLs that work best are ones for factual, informational articles. URLs with non-standard heading structures (i.e. review sites, news articles, product signup pages) are likely to perform poorly, and may not lead to any usable output.
+
+<Note>
+  Soon you'll be able to insert links to competitor sitemaps as an alternative to URLs, and have Byword scrape their links for you!
+</Note>
+
+Once you've entered your URLs, and checked that the number of URLs lines in the interface lines up with what you were expecting, hit the Scrape URLs button, and Byword will begin processing the URLs.
+
+\[image]
+
+This will usually take at least 60 seconds, and can take longer for larger lists of URLs.
+
+## Scrape Results
+
+Once the above has completed, Byword will then display the results of its scraping. It will tell you how many URLs were successfully scraped, and how many errors there were.
+
+\[image]
+
+At this point, you can either press Generate to send your articles to the Batch Generator, or you can scroll down the page to look at the headings Byword has prepared.
+
+For all articles that Byword was able to successfully scrape, you'll see rows that look like this.
+
+\[image]
+
+The three icons on the right hand side of each row are (in order):
+
+* **Edit** - Click this if you'd like to manually edit the headings that Byword has prepared.
+
+* **Delete** - Click this if you'd like to delete the article. Note that this can't be reversed.
+
+* **Expand** - Click this if you'd like to see the subheadings that Byword has prepared.
+
+Clicking on the last of these (Expand) will open up a list of the subheadings for that article.
+
+\[image]
+
+Should you wish to remove any headings, you can click the icon next to that heading.
+
+## Unsuccessful Scrapes
+
+Below the list of articles that Byword was able to successfully scrape, you may find a list of URLs that Byword wasn't able to scrape.
+
+\[image]
+
+Errors typically occur when either:
+
+* A site has specific access rules which prevent Byword from scraping that site (meaning some sites are highly likely to cause Byword to error).
+
+* The URL provided doesn't have a heading structure that can easily be mapped onto Byword's style of SEO-optimised headings.
+
+Re-running the scrape is unlikely to fix the error (though may in some rare cases).
+
+## FAQs
+
+<Accordion title="Why haven't my URLs been scraped yet?">
+  Byword uses a queue system to process scrape requests. This means that, at times of high demand, it may take longer to process your job. Byword should be able to scrape 10 URLs per minute, but this may take longer in cases of high demand.
+
+  It's also worth noting that Byword throttles requests to the URLs you provide, as some sites will start rejecting requests from Byword if it notices too many of them within a short period of time.
+</Accordion>
+
+<Accordion title="Does this work in non-English languages?">
+  This tool currently only supports writing in English, but there are plans to expand it to other languages going forward.
+</Accordion>
+
+<Accordion title="How much does this cost?">
+  Write From URL doesn't cost anything to scrape URLs, and from then on uses Byword's default credit system (1 credit per article) to generate articles. Unlimited users generate articles via their provided API key, as per usual.
+</Accordion>
+
+<Accordion title="Why can't I input more than 100 URLs?">
+  This restriction is in place during the feature's launch, to manage stability and server load. This is likely to increase to 1,000 at a later date.
+</Accordion>
+
+<Accordion title="Why do my articles' subheadings look weird?">
+  Usually this is because you inputted a URL with weird subheadings. Write From URL is an experimental feature, and won't be able to scrape every URL perfectly. Some sites will have HTML structures that are much more amenable to scraping and re-working than others, and so it may take a bit of trial and error to find a competitor's site that works well with this feature.
+</Accordion>
+
+<Accordion title="Can I go back to my old scrapes?">
+  Yes! Click the 'History' box at the top of the page, and you'll be able to see your last 25 scrapes, including any edits you made to them.
+</Accordion>
