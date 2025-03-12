@@ -139,5 +139,207 @@
     "socials": {
       "linkedin": "https://linkedin.com/company/bywordai"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/pricing/how-much-does-it-cost",
+      "destination": "/get-started/plans"
+    },
+    {
+      "source": "/",
+      "destination": "/get-started/introduction"
+    },
+    {
+      "source": "/getting-started/formats/glossary-builder",
+      "destination": "/advanced/content-tools/glossary"
+    },
+    {
+      "source": "/getting-started/article-generators/batch-generator",
+      "destination": "/programmatic/creating-articles"
+    },
+    {
+      "source": "/publishing/integrations/wordpress",
+      "destination": "/basics/integrations/wordpress"
+    },
+    {
+      "source": "/getting-started/formats/write-from-url",
+      "destination": "/advanced/content-tools/write-from-urls"
+    },
+    {
+      "source": "/getting-started/custom-formats/glossary-builder",
+      "destination": "/advanced/content-tools/glossary"
+    },
+    {
+      "source": "/getting-started/search-console/automatic-indexing",
+      "destination": "/basics/google-search-console/indexing"
+    },
+    {
+      "source": "/pricing/byword-unlimited",
+      "destination": "/advanced/unlimited"
+    },
+    {
+      "source": "/publishing/integrations/api",
+      "destination": "/basics/integrations/api"
+    },
+    {
+      "source": "/getting-started/interlinking",
+      "destination": "/basics/advanced-settings/internal-linking"
+    },
+    {
+      "source": "/getting-started/custom-formats/write-from-url",
+      "destination": "/advanced/content-tools/write-from-urls"
+    },
+    {
+      "source": "/publishing/integrations",
+      "destination": "/basics/integrations/wordpress"
+    },
+    {
+      "source": "/getting-started/article-settings/avoiding-ai-detection",
+      "destination": "/basics/article-settings/writing-style"
+    },
+    {
+      "source": "/seo-strategy/creating-glossaries",
+      "destination": "/advanced/content-tools/glossary"
+    },
+    {
+      "source": "/getting-started/article-settings/images",
+      "destination": "/basics/article-settings/images"
+    },
+    {
+      "source": "/getting-started/article-settings/writing-style",
+      "destination": "/basics/article-settings/writing-style"
+    },
+    {
+      "source": "/getting-started/article-settings/custom-prompts",
+      "destination": "/basics/advanced-settings/custom-prompts"
+    },
+    {
+      "source": "/publishing/integrations/shopify",
+      "destination": "/basics/integrations/shopify"
+    },
+    {
+      "source": "/getting-started/article-settings/other-languages",
+      "destination": "/basics/article-settings/languages"
+    },
+    {
+      "source": "/seo-strategy/case-study-causal",
+      "destination": "/seo-strategy/rank-first-edit-second"
+    },
+    {
+      "source": "/custom/generating-custom-articles",
+      "destination": "/programmatic/creating-articles"
+    },
+    {
+      "source": "/seo-strategy/n-dimensional-seo",
+      "destination": "/seo-strategy/n-dimensional-seo"
+    },
+    {
+      "source": "/publishing/integrations/webflow",
+      "destination": "/basics/integrations/webflow"
+    },
+    {
+      "source": "/getting-started/search-console",
+      "destination": "/basics/google-search-console/indexing"
+    },
+    {
+      "source": "/getting-started/quickstart",
+      "destination": "/get-started/quickstart"
+    },
+    {
+      "source": "/custom/templates",
+      "destination": "/programmatic/templates"
+    },
+    {
+      "source": "/getting-started/automatic-indexing",
+      "destination": "/basics/google-search-console/indexing"
+    },
+    {
+      "source": "/getting-started/search-console/keyword-research",
+      "destination": "/basics/google-search-console/performance"
+    },
+    {
+      "source": "/custom/documents",
+      "destination": "/basics/documents"
+    },
+    {
+      "source": "/publishing/sitemap-generation",
+      "destination": "/advanced/content-tools/write-from-sitemap"
+    },
+    {
+      "source": "/getting-started/formats/list-based-articles",
+      "destination": "/advanced/content-tools/lists"
+    },
+    {
+      "source": "/getting-started/article-creation-modes/keyword-mode",
+      "destination": "/basics/creating-content"
+    },
+    {
+      "source": "/getting-started/article-creation-modes/title-mode",
+      "destination": "/basics/creating-content"
+    },
+    {
+      "source": "/getting-started/formats/programmatic-builder",
+      "destination": "/advanced/content-tools/programmatic-builder"
+    },
+    {
+      "source": "/getting-started/avoiding-ai-detection",
+      "destination": "/basics/article-settings/writing-style"
+    },
+    {
+      "source": "/publishing/integrations/zapier",
+      "destination": "/basics/integrations/zapier"
+    },
+    {
+      "source": "/getting-started/keyword-research",
+      "destination": "/basics/google-search-console/performance"
+    },
+    {
+      "source": "/getting-started/custom-formats/programmatic-builder",
+      "destination": "/advanced/content-tools/programmatic-builder"
+    },
+    {
+      "source": "/seo-strategy/case-study-causal/faqs",
+      "destination": "/seo-strategy/rank-first-edit-second"
+    },
+    {
+      "source": "/getting-started/article-creation-modes/title-+-subheadings-mode",
+      "destination": "/basics/creating-content"
+    },
+    {
+      "source": "/getting-started/article-settings",
+      "destination": "/basics/article-settings/writing-style"
+    },
+    {
+      "source": "/seo-strategy/rank-first-edit-second",
+      "destination": "/seo-strategy/rank-first-edit-second"
+    },
+    {
+      "source": "/getting-started/article-generators/single-article-generator",
+      "destination": "/basics/creating-content"
+    },
+    {
+      "source": "/seo-strategy/choosing-inputs",
+      "destination": "/seo-strategy/choosing-inputs"
+    },
+    {
+      "source": "/getting-started/article-generators",
+      "destination": "/basics/creating-content"
+    },
+    {
+      "source": "/getting-started/calls-to-action",
+      "destination": "/basics/advanced-settings/ctas"
+    },
+    {
+      "source": "/getting-started/custom-formats",
+      "destination": "/programmatic/introduction"
+    },
+    {
+      "source": "/getting-started/article-settings/article-length",
+      "destination": "/basics/article-settings/article-length"
+    },
+    {
+      "source": "/getting-started/custom-formats/list-based-articles",
+      "destination": "/advanced/content-tools/lists"
+    }
+  ]
 }
