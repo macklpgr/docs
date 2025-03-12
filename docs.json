@@ -1,6 +1,10 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
+  "modeToggle": {
+  "default": "light",
+  "isHidden": true
+}
   "name": "Byword explained",
   "colors": {
     "primary": "#357CFF",
