@@ -8,127 +8,125 @@ A dataset is a CSV that contains a collection of columns, where each row in the 
 
 This can sound a little abstract so, before we get into the details, let's make sense of the idea through a simple example.
 
-## Example 1: A Basic Dataset
+## Example 1: A Basic Dataset ([link](https://docs.google.com/spreadsheets/d/165NlIQIzR-SWj7iCtW3QGoYRvjirMyqg1fhwi13zwoc/edit?gid=0#gid=0))
 
-\[video]
+<iframe width="1027" height="641" src="https://www.youtube.com/embed/r1b9egANklE?list=PLTAyUbAGdMEhVeXvL5uYsZqkLIvjVgdnF" title="Custom Articles: Quickstart" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 
 The most basic you could create is a simple column with a heading. It might look like this:
 
-\[image]
+![](/images/Screenshot2025-03-12at10.50.55.png)
 
 What we've essentially done here is to create a column called 'Plant' with 10 values.
 
 If we have a simple template which only contains one variable, we can connect the dataset to the template in order to generate 10 unique articles, each containing a different value for that variable. For example, our template may look something like this:
 
-\[image]
+![](/images/Screenshot2025-03-12at10.52.49.png)
 
-Note that the variable name {plant_name} doesn't have to be the same as what we had in our dataset (Plant). We'll see why shortly!
+Note that the variable name \{plant\_name} doesn't have to be the same as what we had in our dataset (Plant). We'll see why shortly!
 
-If we have this template, and the dataset above, we can head to the programmatic content dashboard and combine them by clicking 'Generate' on the template.
+If we have this template, and the dataset above, we can head to the [programmatic dashboard](https://byword.ai/programmatic) and combine them by clicking 'Generate' on the template.
 
-\[image]
+![](/images/Screenshot2025-03-12at10.54.02.png)
 
 We'll then be taken to the generation screen, where we can connect our template to our dataset, and map the variables appropriately.
 
-\[image]
+![](/images/Screenshot2025-03-12at10.55.29.png)
 
-We'll cover this screen in more detail in the Generating Programmatic Content section. The most important bits to note for now are that:
+We'll cover this screen in more detail in [this section](/programmatic/creating-articles). The most important bits to note for now are that:
 
-* We've chosen to connect our template to the 'Example - Plant Dataset'.
+* We've chosen to connect our template to a dataset.
 
-* Byword has detected that our template contains a variable named 'plant\_name', and we've mapped that to the column in our Dataset called 'Plant'.
+* Byword has detected that our template contains a variable named 'plant\_name', and we've mapped that to the column in our dataset called 'Plant'.
 
-Once we start generating this project, Byword will queue one article for every row in our dataset, and every occurrence of the '{plant_name}' variable within our template will be replaced by a corresponding value of 'Plant' from our dataset.
+Once we start generating this project, Byword will queue one article for every row in our dataset, and every occurrence of the \{plant\_name} variable within our template will be replaced by a corresponding value of 'Plant' from our dataset.
 
-A couple of screenshots above we saw that our article title was 'How To Grow {plant_name}' and that our first H2 was 'The Benefits of Growing {plant_name}'. This means that our articles will begin to generate as:
+A couple of screenshots above we saw that our article title was 'How To Grow \{plant\_name}' and that our first H2 was 'The Benefits of Growing \{plant\_name}'. This means that our articles will begin to generate in the following structure:
 
-1. <h1>How To Grow Tomatoes</h1>
+```
+<h1> How To Grow Tomatoes </h1>
+<p> introductory paragraph </p>
+<p> introductory paragraph </p>
 
+<h2> Tips for Growing Tomatoes </h2>
+<p> body paragraph </p>
+<p> body paragraph </p>
+```
 
-   introductory paragraphs
+```
+<h1> How To Grow Basil </h1>
+<p> introductory paragraph </p>
+<p> introductory paragraph </p>
 
+<h2> Tips for Growing Basil </h2>
+<p> body paragraph </p>
+<p> body paragraph </p>
+```
 
-   <h2>The Benefits of Growing Tomatoes</h2>
-
-
-   text section
-
-2. <h1>How To Grow Basil</h1>
-
-
-   introductory paragraphs
-
-
-   <h2>The Benefits of Growing Basil</h2>
-
-
-   text section
-
-3. And so on, for Lavendar, Succulents et cetera!
+And so on for lavender, succulents, etc.
 
 Hopefully this should start to make sense, and give you some understanding of how datasets work in Byword. Now that we have some familiarity, let's take a step back and look at how we actually create and work with datasets, before covering some more complex examples.
 
-## Creating a Dataset
+## Creating a dataset
 
-To create a dataset, head to the dataset screen.
+To create a dataset, head to the [dataset screen](https://byword.ai/programmatic-dataset).
 
-\[image]
+![](/images/Screenshot2025-03-12at11.00.32.png)
 
 Let's start by giving our dataset a name, and uploading the CSV example from earlier just to get us going.
 
 Once our CSV has uploaded, we'll see something that looks like the below. Byword is telling us that it's found one column (Plant) and that it's found 10 values or rows for that column.
 
-\[image]
+![](/images/Screenshot2025-03-12at11.02.16.png)
 
 The green check indicates that everything is looking good, and specifically that it's found a value of Plant for each row. This might seem obvious, but we'll see examples later where we can work with missing values.
 
-Once we're good to go, we'll hit Save Dataset, and get taken back to the Programmatic Content dashboard where we'll see our brand new dataset in our account.
+Once we're good to go, we'll hit Save Dataset, and get taken back to the programmatic dashboard where we'll see our brand new dataset in our account.
 
-\[image]
+![](/images/Screenshot2025-03-12at11.03.02.png)
 
 At this point, we can either go back to editing whichever template we'd like to use in conjunction with our dataset, or start generating articles as we saw in Example 1.
 
-## Example 2: 2-Dimensional Datasets
+## Example 2: 2-Dimensional Datasets ([link](https://docs.google.com/spreadsheets/d/165NlIQIzR-SWj7iCtW3QGoYRvjirMyqg1fhwi13zwoc/edit?gid=995662062#gid=995662062))
 
-\[video]
+<iframe width="1027" height="641" src="https://www.youtube.com/embed/tN6CsQIysRI?list=PLTAyUbAGdMEhVeXvL5uYsZqkLIvjVgdnF" title="Custom Articles: 2-Dimensional Templates" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 
 If you've read through Byword's docs before, you might have come across the idea of 2-dimensional SEO. Put simply, this is where you combine two lists together to create an even larger list of possible permutations.
 
 As an example, let's say we have an article title like the following.
 
-\[image]
+![](/images/Screenshot2025-03-12at11.08.12.png)
 
-If we have 10 unique values for {plant_name}, and 10 unique values for {location}, we can combine these to get 100 unique articles.
+If we have 10 unique values for \{plant}, and 10 unique values for \{country}, we can combine these to get 100 unique articles.
 
 Currently, we'd do this by creating our dataset to look like this:
 
-\[image]
+![](/images/Screenshot2025-03-12at11.09.10.png)
 
-Note that, in the Google Sheet, I've used a formula in A2 (which you can steal) to generate all possible pairs of plants and countries
+Note that, in the [Google Sheet](https://docs.google.com/spreadsheets/d/165NlIQIzR-SWj7iCtW3QGoYRvjirMyqg1fhwi13zwoc/edit?gid=995662062#gid=995662062), I've used a formula in A2 (which you can steal) to generate all possible pairs of plants and countries
 
 We're working on ways to make this simpler in future, but for now generating all possible combinations in Sheets is generally the safest approach.
 
 When we upload this into the dataset creation screen, we should see the following:
 
-\[image]
+![](/images/Screenshot2025-03-12at11.11.39.png)
 
 Note that Byword hasn't imported 'plant list' or 'country list'. This is because the empty column C acts as a break for Byword. As soon as Byword reaches an empty column, it stop scanning the CSV. You can therefore leave any rough workings to the right side of your sheet, and not worry about them being imported.
 
 If we now go to generate articles from our updated template with our 2-dimensional dataset, we can connect the variables as follows.
 
-\[image]
+![](/images/Screenshot2025-03-12at11.12.44.png)
 
 Generating this project will now generate 100 articles from our template, with titles like How To Grow Tomatoes in Germany and How To Grow Lavender in Brazil, and so on.
 
-## Example 3: Datasets with Custom Data
+## Example 3: Datasets with Custom Data ([link](https://docs.google.com/spreadsheets/d/165NlIQIzR-SWj7iCtW3QGoYRvjirMyqg1fhwi13zwoc/edit?gid=2119744141#gid=2119744141))
 
-\[video]
+<iframe width="1027" height="641" src="https://www.youtube.com/embed/G_kvUHidP44?list=PLTAyUbAGdMEhVeXvL5uYsZqkLIvjVgdnF" title="Custom Articles: Integrating Custom Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 
 So far we've looked at datasets from quite a narrow angle, as simply ways to build article titles programmatically. But there's far more to them than that!
 
 To see what I mean by this, let's look at an example where we don't just have a list of plants, but where we having unique and custom data associated with each of our plants. We might, perhaps, have an internal dataset within our plant company that looks a little something like this:
 
-\[image]
+![](/images/Screenshot2025-03-12at11.14.02.png)
 
 The specific columns aren't too important here. What is important is just that we have some interesting data associated to each of our plants, and which we'll be able to use in our articles.
 
@@ -136,23 +134,23 @@ With this in mind, we can start to do some much more exciting stuff with our tem
 
 We'll start with the same article title and initial text section that we had earlier:
 
-\[image]
+![](/images/Screenshot2025-03-12at11.29.21.png)
 
 With our new dataset columns at hand, we can start building much more interesting Text Sections though:
 
-\[image]
+![](/images/Screenshot2025-03-12at11.29.50.png)
 
 Here, our plan is to pull in our brand's difficulty score that we have from our dataset. We can start to see how adding the extra columns gives us articles that are both highly unique, and more engaging to a user than typical AI content.
 
 These extra columns can help us do more than just tailor our Text blocks though! We could, for example, insert inline images using Custom HTML blocks:
 
-\[image]
+![](/images/Screenshot2025-03-12at11.30.26.png)
 
 If you're not familiar with raw HTML, this is basically just inserting an image (whose URL is in our dataset) into the article!
 
 And we can even use our data to tailor things like our CTAs:
 
-\[image]
+![](/images/Screenshot2025-03-12at11.30.47.png)
 
 We've done some clever stuff here!
 

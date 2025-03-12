@@ -4,22 +4,47 @@ description: 'Crafting your perfect article template'
 icon: 'file-code'
 ---
 
-Templates are the core of programmatic content, and are therefore a good place to start. To create a new template, head to the programmatic content dashboard, and click Create Template.
+Templates are the core of custom articles, and are therefore a good place to start. To create a new template, head to the custom article dashboard, and click Create Template.
 
 This will take you to the template creation screen, with a blank template. You should see something like the below:
 
-[image]
+![](/images/Screenshot2025-03-12at11.31.47.png)
 
 There are a few things to note:
 
 ### Template Name
+
 You'll want to start by giving your template a name. This doesn't affect articles generated via that template; it's simply to help you identify the template within Byword.
 
 ### Article Template
+
 This is the most important bit, as its where you build your article template. You'll see there's already one block created for you (your Article Title) - we'll come back to this shortly!
 
 ### Writing Instructions
+
 This is where you can provide high-level guidance to Byword that you want to have an effect over your whole article. You can see some examples of good writing instructions below.
+
+## Examples of Good Writing Instructions
+
+Below are some examples of good writing instructions:
+
+<AccordionGroup>
+  <Accordion title="Tone of voice" defaultOpen={false} icon="microphone">
+    Instructions like write in a casual, human tone of voice will work well, and affect how your articles are written.
+  </Accordion>
+
+  <Accordion title="Body text structure" defaultOpen={false} icon="file">
+    You could enter instructions like write in lots of short snappy paragraphs or include plenty of bullet points and numbered lists to ensure the text is easy to scan.
+  </Accordion>
+
+  <Accordion title="Formatting Preferences" defaultOpen={false} icon="pencil">
+    Here, you can specify if you have any particular formatting preferences. For example, you might write Use bold for important points and italics for emphasis.
+  </Accordion>
+
+  <Accordion title="Target Audience" defaultOpen={false} icon="users">
+    Who is the article for? Provide a brief description of your target audience to ensure the content is relevant and engaging for them. For instance, Write for a tech-savvy audience interested in the latest AI advancements.
+  </Accordion>
+</AccordionGroup>
 
 As I said, the article template itself is the most important part of this page, so let's dive into that!
 
@@ -33,42 +58,55 @@ In this section, we'll go through each of the blocks available in the article te
 
 Every article starts with an Article Title block - this can't be removed and must come at the start of your template.
 
-[image]
+![](/images/Screenshot2025-03-12at13.19.23.png)
 
 In your Article Title block you'll see a few options that you can play with:
 
-<details>
-  <summary>Article Title</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="Article Title" defaultOpen={false} icon="text">
+    As the name suggests, this is your article title. It should be entered in title case, or however you'd like it to appear in your articles.
 
-<details>
-  <summary>Introductory Paragraphs</summary>
-  [image]
-</details>
+    The most important thing to note is that your title must contain a {variable}, like {plant} in the example above. The reason for this, as we'll see later, is that this enables us to connect the template to a dataset. A very simply dataset could just be a list of 10 plants (which when combined with this title would give us 10 articles), though we'll see later on that we can do more sophisticated things here too!
+  </Accordion>
 
-<details>
-  <summary>Image Size</summary>
-  [image]
-</details>
+  <Accordion title="Introductory Paragraphs" defaultOpen={false} icon="pencil">
+    This lets you choose how many paragraphs you'd like to come immediately after your title. Choose 1 for a quick snappy intro, or up to 3 to set the scene in more detail.
+  </Accordion>
+
+  <Accordion title="Image Size" defaultOpen={false} icon="image">
+    Currently Custom Articles support a header image only, the size of which you can choose here. You might notice that the options are a little different from regular Byword - that's because we're trialling Dall-E 3. Images should be of significantly higher quality though.
+
+    You'll also notice a Customise Prompt button. Clicking this will expose the default image prompt, which you can change to suit your site's aesthetics.
+  </Accordion>
+</AccordionGroup>
 
 ## Table of Contents
 
 If you'd like your article to contain a table of contents, you can add this block to your article. Though it can technically appear wherever you'd like it to within the article, it's highly recommended to have it as the second block, below your Article Title block.
 
-[image]
+![](/images/Screenshot2025-03-12at13.19.55.png)
 
 You can tweak the following parameters within your Table of Contents:
 
-<details>
-  <summary>Subheading</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="Subheading" defaultOpen={false} icon="h2">
+    If you want your contents to have its own H2 subheading, you can enter this here. Values of 'Contents', 'Table of Contents', or 'In This Article' are good options here.
 
-<details>
-  <summary>List Type</summary>
-  [image]
-</details>
+    If you leave this blank, Byword won't generate one for you. Rather, it'll simply insert the table of contents with no subheading. This can often be useful when the table of contents immediately follows your Article Title block, as this will insert the contents between your introduction paragraphs and the next section.
+  </Accordion>
+
+  <Accordion title="List Type" defaultOpen={false} icon="list">
+    Here you can choose between whether you'd like your table of contents to appear as either:
+    • An unordered list (with bulletpoints)
+    or
+
+    1. An ordered list (with numbers)
+  </Accordion>
+
+  <Accordion title="Include All Subheadings?" defaultOpen={false} icon="toggle-on">
+    This dropdown allows you to choose whether you'd like your table of contents to include only H2 subheadings, or H2 and H3 subheadings. The former is generally advised for longer articles, to prevent your table of contents from getting too long.
+  </Accordion>
+</AccordionGroup>
 
 ## Text Section
 
@@ -76,28 +114,33 @@ Text Sections are the bread and butter of your templates. They start with an H2,
 
 You can tweak the following parameters within each Text Section:
 
-<details>
-  <summary>Heading 2</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="Heading 2" defaultOpen={false} icon="h2">
+    You can either specify an H2, or leave this blank and let Byword generate it for you. Some things to note though are:
+    • You can (and in many cases should) use variable names in your H2s. You can see an example of this below this section.
+    • If you leave the H2 blank, you will need to enter a Prompt (Byword needs to have some rough idea of what you'd like written here!). Byword will then use your prompt to come up with an appropriate H2.
+    • If you provide an H2, Byword will use your casing, so make sure your H2 is as you'd like it to appear in your final article.
+  </Accordion>
 
-<details>
-  <summary>Heading 3s</summary>
-  [image]
-</details>
+  <Accordion title="Heading 3s" defaultOpen={false} icon="h3">
+    Here you can specify both how many H3s you'd like in this section, and whether you'd like to specify any of them.
 
-<details>
-  <summary>Prompt</summary>
-  [image]
-</details>
+    You can skip this section entirely if you'd like Byword to come up with its own H3s, or you can control the number using the Add H3 button. Each H3 can then be left empty for Byword to generate, or specified by writing in your desired text (which may include {variables}).
+  </Accordion>
+
+  <Accordion title="Prompt" defaultOpen={false} icon="text">
+    This is your opportunity to tell Byword what you want this section to look like, in plain English. Feel free to specify whatever you'd like here, and Byword will do its best to accommodate. You don't have to fill this section out unless you've left the H2 empty (in which case it is required).
+  </Accordion>
+</AccordionGroup>
 
 Here's an example of what a Text Section could look like, in an article titled 'How to Grow {plant}':
 
-[image]
+![](/images/Screenshot2025-03-12at13.21.24.png)
 
 In this example, we're telling Byword a few important things:
 
 * The H2 is blank, so Byword will generate that based on the prompt (i.e. it'll generate an H2 about soil conditions).
+
 * We've specified that we want 3 H3s, and that the second one should be 'The Perfect Soil PH'. Byword will fill in the first and third.
 
 Typically you won't run into many cases where you'll want to specify just one of your H3s, so the above is largely for illustrative purposes.
@@ -106,70 +149,84 @@ Typically you won't run into many cases where you'll want to specify just one of
 
 List sections allow you to build multiple types of lists into your articles, and can be useful when you want Byword to present information in a structured format.
 
-[image]
+![](/images/Screenshot2025-03-12at13.22.11.png)
 
 You can toggle the following parameters for List blocks:
 
-<details>
-  <summary>Heading 2</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="Heading 2" defaultOpen={false} icon="h2">
+    Fill this in if you'd like to specify your H2. Optionally, you can leave this blank if you specify a prompt (Byword will use this to generate your H2 for you).
+  </Accordion>
 
-<details>
-  <summary>Number of Items</summary>
-  [image]
-</details>
+  <Accordion title="Number of Items" defaultOpen={false} icon="tag">
+    Specify the number of items that you'd like to appear in your list. In some cases like the example screenshotted above, this may appear redundant (because the number also appears in the H2). Please do still make sure to set this though!
 
-<details>
-  <summary>List Type</summary>
-  [image]
-</details>
+    The maximum number of items is capped at 25 for ordered and unordered lists, and 10 for subheading-based lists (see the card below for more details).
+  </Accordion>
 
-<details>
-  <summary>Prompt</summary>
-  [image]
-</details>
+  <Accordion title="List Type" defaultOpen={false} icon="list">
+    Here you can choose whether you'd like your list to be written as:
+    • An unordered list (with bulletpoints)
+    or
+
+    1. An ordered list (with numbers)
+       or
+       H3 Subheadings
+
+    Note that the first two options are better for longer lists, where you want to simply reference list items, or only cover them in short detail. The H3 Subheadings option will add significantly more length to your article, and is better used on lists with smaller Number of Items values.
+  </Accordion>
+
+  <Accordion title="Prompt" defaultOpen={false} icon="text">
+    Here you can tell Byword, in plain English, what you'd like your list to focus on, or any instructions specific to this block.
+
+    This is an optional field, but is required if you haven't provided a Heading 2.
+  </Accordion>
+</AccordionGroup>
 
 ## Frequently Asked Questions
 
 FAQ sections consists of an H2, followed by a customizable number of H3 subsections which each address common questions around your article's topic. FAQs are great for winning Featured Snippets, and more generally addressing questions that readers are likely to have.
 
-[image]
+![](/images/Screenshot2025-03-12at13.22.34.png)
 
 FAQ blocks are quick and easy to set up, and allow you to customize:
 
-<details>
-  <summary>Heading 2</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="Heading 2" defaultOpen={false} icon="h2">
+    You can input your Heading 2 here, which in almost all cases can just be left as 'Frequently Asked Questions'. You can change this however, or even leave it blank so long as you provide a Prompt, though this is generally not advised in the case of FAQ blocks.
+  </Accordion>
 
-<details>
-  <summary>Number of Questions</summary>
-  [image]
-</details>
+  <Accordion title="Number of Questions" defaultOpen={false} icon="question">
+    Use this field to specify the number of questions you'd like addressed in this block. As each question is its own H3 subheading, this effectively lets you control the number of H3s in the block.
+  </Accordion>
 
-<details>
-  <summary>Prompt</summary>
-  [image]
-</details>
+  <Accordion title="Prompt" defaultOpen={false} icon="text">
+    You can use this field to write any plain language instructions that you'd like Byword to follow when building your FAQ block. You can use this to give it specific questions, or even just a general direction of what sorts of questions you'd like it to focus on.
+  </Accordion>
+</AccordionGroup>
 
 ## Table
 
 Table blocks allow you to display information inside of an HTML-formatted table. This can be great when your article compares different things (perhaps comparing different plants you could grow, or different products you could buy for your plants).
 
-[image]
+![](/images/Screenshot2025-03-12at13.23.00.png)
 
 Tables are quick and easy to set up, and give you a significant amount of freedom to control how they appear.
 
-<details>
-  <summary>Heading 2</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="Heading 2" defaultOpen={false} icon="h2">
+    Here you can specify what H2 you'd like this section to come under. Alternatively, you can leave it blank so long as you provide a Prompt (so Byword has an idea what to generate for you).
+  </Accordion>
 
-<details>
-  <summary>Prompt</summary>
-  [image]
-</details>
+  <Accordion title="Prompt" defaultOpen={false} icon="text">
+    The Prompt section allows you to give Byword plain language instructions on how you'd like it to generate this section for you. Prompts are particularly important when it comes to the Table block, as Byword needs context on what sort of data you would like to display.
+
+    Some ideas of what you might want to include are:
+    • A description of the data you'd like in your table
+    • Any requirements on the number of rows or columns
+    • Any specific columns you'd like included (e.g. make sure to compare typical prices, etc.)
+  </Accordion>
+</AccordionGroup>
 
 ## Call to Action
 
@@ -177,62 +234,74 @@ Calls to Action (or CTAs) are what help sell your brand or product to a reader. 
 
 Byword lets you add a highly customizable CTA block to your articles, helping you to convert users from your content.
 
-[image]
+![](/images/Screenshot2025-03-12at13.23.27.png)
 
-Experienced Byword users may notice that the available fields are essentially the same as available in the CTA feature that predated Programmatic Content. You can in fact import CTAs from there into your Programmatic Content templates, by using the Load CTA button in the screenshot above.
+Experienced Byword users may notice that the available fields are essentially the same as available in the CTA feature that predated Custom Articles. You can in fact import CTAs from there into your Custom Article templates, by using the Load CTA button in the screenshot above.
 
 If you're creating a CTA from scratch though, you can customize the following parameters:
 
-<details>
-  <summary>Brand Name</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="Brand Name" defaultOpen={false} icon="briefcase">
+    This is simply the name of your brand, as you'd like it displayed in your CTA for users to read.
+  </Accordion>
 
-<details>
-  <summary>CTA Action</summary>
-  [image]
-</details>
+  <Accordion title="CTA Action" defaultOpen={false} icon="octagon-exclamation">
+    This is what you'd like users to do, and is typically what Byword will choose as its anchor text if you provide a URL (see below).
 
-<details>
-  <summary>CTA URL</summary>
-  [image]
-</details>
+    Good examples of actions are things like:
+    • Sign up
+    • Shop now
+    • Register today
+  </Accordion>
 
-<details>
-  <summary>Brand Information</summary>
-  [image]
-</details>
+  <Accordion title="CTA URL" defaultOpen={false} icon="link">
+    If there's a specific URL that you'd like Byword to link users to, enter this here and Byword will do its best to place it appropriately via an href tag inside of the CTA.
+
+    This could be a URL to your sign up page, your main catalog page, or something else; whatever is most appropriate for your site!
+  </Accordion>
+
+  <Accordion title="Brand Information" defaultOpen={false} icon="info">
+    This is your opportunity to teach Byword about your brand. Without this, Byword doesn't know how to portray your brand, or how to link the article it's writing to your brand.
+
+    Provide as much information as feels relevant here describing your brand, so that Byword is as qualified as possible to write on its behalf.
+  </Accordion>
+</AccordionGroup>
 
 ## Conclusion
 
 A conclusion is a specialized version of the Text Section, designed to sit at the end of the article (either before or after a CTA, if you have one), and summarize what's been said so far.
 
-[image]
+![](/images/Screenshot2025-03-12at13.23.52.png)
 
 Conclusions are quick and easy to build, and can often provide a neat ending to longer-form articles. You can customize:
 
-<details>
-  <summary>Heading 2</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="Heading 2" defaultOpen={false} icon="h2">
+    You can customize the H2 for this block, though it's generally recommended to use something fairly standard like:
+    • Conclusion
+    • Summary
+    • Wrapping up
 
-<details>
-  <summary>Prompt</summary>
-  [image]
-</details>
+    A Heading 2 is required unless you provide a prompt (in which case Byword will use the prompt to generate the H2 for you).
+  </Accordion>
+
+  <Accordion title="Prompt" defaultOpen={false} icon="text">
+    The prompt section here lets you steer the conclusion in any way you like. You might want to ask Byword to use a particular formatting, or to focus on a particular conluding point/aspect of your topic.
+  </Accordion>
+</AccordionGroup>
 
 ## Custom HTML
 
 Last but not least, we have the ability to add custom HTML blocks:
 
-[image]
+![](/images/Screenshot2025-03-12at13.24.24.png)
 
 To use this, simply insert whatever HTML you'd like into the box. For example, inserting `<p>hello world</p>` into the box would cause a paragraph saying hello world to appear in your article.
 
 This is of course a very basic example and there are far more interesting things you can do with this. Custom HTML is an advanced feature though, and so it's only recommended to use this block if you feel comfortable and have experience of working with HTML.
 
 <Note>
-Note that it's currently only possible to insert one Custom HTML block per article. If you have a use case that requires multiple blocks, please contact mack@byword.ai.
+  Note that it's currently only possible to insert one Custom HTML block per article. If you have a use case that requires multiple blocks, please contact mack@byword.ai.
 </Note>
 
 ## Advanced Settings
@@ -241,7 +310,7 @@ Now that we've covered all of the available template blocks within Byword, let's
 
 You can access the advanced settings popup in the top right of the template builder, and it will appear as follows:
 
-[image]
+![](/images/Screenshot2025-03-12at13.26.31.png)
 
 ### Article Length
 
@@ -259,47 +328,98 @@ If you're comfortable writing custom CSS, and want this injected into the HTML t
 
 Do bear in mind that this is an advanced feature, and you should generally avoid using this unless you feel comfortable with writing custom CSS.
 
-<details>
-  <summary>Potential CSS Selectors</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="Potential CSS Selectors" defaultOpen={false} icon="code">
+    These are some options of selectors which you might want to consider using:
+
+    General Selectors
+    • body
+    • p
+    • a
+    • a:hover
+    • img
+    • h1
+    • h2
+    • h3
+    • ul
+    • ol
+    • li
+
+    Table of Contents Selectors
+    • #byword\_contents\_container
+    • .byword\_contents\_title
+    • .byword\_contents\_list
+    • .byword\_contents\_list li
+    • .byword\_contents\_list .h2
+    • .byword\_contents\_list .h3
+    • .byword\_contents\_list a
+    • .byword\_contents\_list a:hover
+
+    Table Selectors
+    • table
+    • th
+    • td
+    • tr
+  </Accordion>
+</AccordionGroup>
 
 ## Errors
 
 Byword will check your template for a couple of possible errors, and require you to fix these before saving your template, or generating any articles from it. You can find details on the possible errors below:
 
-<details>
-  <summary>No Variables Found</summary>
-  [image]
-</details>
+<AccordionGroup>
+  <Accordion title="No Variables Found" defaultOpen={false} icon="empty-set">
+    This error appears when there are no {variables} at all within your entire template. Templates need variables to function, and in order to generate articles, so make sure to include at least one!
 
-<details>
-  <summary>No Variables Found in Title</summary>
-  [image]
-</details>
+    See the related error below for more detail.
+  </Accordion>
 
-<details>
-  <summary>Capitalization Variants</summary>
-  [image]
-</details>
+  <Accordion title="No Variables Found in Title" defaultOpen={false} icon="text">
+    Related to the above error, all templates need at least one {variable} in their Article Title block.
 
-<details>
-  <summary>H2 or Prompt Required (block type)</summary>
-  [image]
-</details>
+    Confused why? Well, the whole idea behind templates is that we're building templates not individual articles. For something to be a template, we need to have something that will differ between each article that is generated from it.
 
-<details>
-  <summary>Invalid List/FAQ Number</summary>
-  [image]
-</details>
+    By making sure that we have at least one {variable} in your title, you are in a sense guaranteeing that each article produced from your template will be unique.
+  </Accordion>
 
-<details>
-  <summary>Table Won't Import to Webflow</summary>
-  [image]
-</details>
+  <Accordion title="Capitalization Variants" defaultOpen={false} icon="text-size">
+    This error appears when you have two variables within your template which differ only by capitalization. For example, you might be using the variables {plant} and {Plant}.
+
+    To keep things simple and avoid confusion, Byword forces you to have unique variable names. Trust us, this will help you when it comes to connecting your template to a dataset!
+
+    Please fix this error by ensuring that all variables have unique names. In the example above, this could mean renaming {Plant} to something else, or rewriting it as {plant} to consolidate your variables.
+  </Accordion>
+
+  <Accordion title="H2 or Prompt Required (block type)" defaultOpen={false} icon="check">
+    Each of Byword's text-based blocks gives you a customizable H2, and a prompt section in which you can write high-level instructions.
+
+    It's perfectly fine to build a block in which you've only entered values for one of these:
+    • H2 but no prompt
+    Here you're telling Byword what H2 you want, and declining to add any further instructions.
+    • Prompt but no H2
+    Here you're letting Byword come up with its own H2, based on the context you provide in your prompt.
+
+    However it's not possible to have a block where neither a H2 or prompt are provided. Put simply, Byword needs to know what you want written about!
+  </Accordion>
+
+  <Accordion title="Invalid List/FAQ Number" defaultOpen={false} icon="list">
+    This error appears when you've tried to create a List or FAQ section with an invalid number of items. The limits are:
+    • 25 items, for a List with type set to Ordered or Unordered
+    • 10 items, for a List with type set to H3 Subheadings
+    • 2 to 10 items, for a FAQ block
+
+    Please double check that all List and FAQ blocks meet these limits.
+  </Accordion>
+
+  <Accordion title="Table Won't Import to Webflow" defaultOpen={false} icon="table-cells">
+    This error will appear if you have a table in your template, and your account has a live Webflow integration.
+
+    We generally don't recommend exporting articles with tables to Webflow, because Webflow's Rich Text block can't handle them. Tables must be separately imported into a Custom HTML block inside Webflow (which can be difficult to map), and so we generally recommend avoiding tables if you're looking to export to Webflow.
+  </Accordion>
+</AccordionGroup>
 
 ## Finishing Up
 
 Once you're finished building your article template, you're good to move on and start thinking about datasets.
 
-[image]
+![](/images/Screenshot2025-03-12at13.28.15.png)
