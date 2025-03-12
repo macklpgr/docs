@@ -43,8 +43,8 @@
                 "group": "Advanced settings",
                 "icon": "sliders",
                 "pages": [
-                  "basics/advanced-settings/ctas",
                   "basics/advanced-settings/custom-prompts",
+                  "basics/advanced-settings/ctas",
                   "basics/advanced-settings/internal-linking",
                   "basics/advanced-settings/model"
                 ]
