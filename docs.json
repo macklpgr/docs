@@ -113,7 +113,7 @@
             "group": "The basics",
             "pages": [
               "seo-strategy/ai-changing",
-              "seo-strategy/choosing-inputs2",
+              "seo-strategy/choosing-inputs",
               "seo-strategy/n-dimensional-seo",
               "seo-strategy/rank-first-edit-second",
               "seo-strategy/will-google-penalise-me"
@@ -235,10 +235,6 @@
       "destination": "/programmatic/creating-articles"
     },
     {
-      "source": "/seo-strategy/n-dimensional-seo",
-      "destination": "/seo-strategy/n-dimensional-seo"
-    },
-    {
       "source": "/publishing/integrations/webflow",
       "destination": "/basics/integrations/webflow"
     },
@@ -315,16 +311,8 @@
       "destination": "/basics/article-settings/writing-style"
     },
     {
-      "source": "/seo-strategy/rank-first-edit-second",
-      "destination": "/seo-strategy/rank-first-edit-second"
-    },
-    {
       "source": "/getting-started/article-generators/single-article-generator",
       "destination": "/basics/creating-content"
-    },
-    {
-      "source": "/seo-strategy/choosing-inputs",
-      "destination": "/seo-strategy/choosing-inputs"
     },
     {
       "source": "/getting-started/article-generators",
