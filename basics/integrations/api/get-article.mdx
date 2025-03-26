@@ -1,0 +1,60 @@
+---
+title: "Get Article"
+api: "POST https://api.byword.ai/get_article"
+description: "Retrieve articles created via the Create Article endpoint"
+---
+
+This endpoint allows you to retrieve articles created via Create Article. Articles typically take around 60 seconds to generate, so it's recommended to call this API at 5 second intervals until the endpoint returns a response with all of the article's fields.
+
+## Request
+
+<ParamField body="key" type="string" required>
+  Your Byword API key. Can be found [here](https://byword.ai/integrate-api).
+</ParamField>
+
+<ParamField body="articleID" type="string" required>
+  The ID of the article that was returned from the Create Article endpoint.
+</ParamField>
+
+## Response
+
+The response will contain all of the article's fields when ready. While the article is still generating, you may receive a partial response.
+
+## Examples
+
+### Request Example
+
+```json
+{
+  "key": "your_api_key_here",
+  "articleID": "1234567890abcdef"
+}
+```
+
+### Success Response
+
+```json
+{
+  "status": "complete",
+  "title": "Sample Article Title",
+  "content": "The full article content...",
+  "wordCount": 1500,
+  "language": "English",
+  "createdAt": "2025-03-25T12:34:56Z"
+}
+```
+
+### Processing Response
+
+```json
+{
+  "status": "processing",
+  "message": "Your article is still being generated. Please try again in a few seconds."
+}
+```
+
+### Implementation Notes
+
+- Articles typically take around 60-120 seconds to generate, but this can vary based on length and complexity.
+- It's recommended to poll this endpoint at 5-second intervals until you receive a complete response.
+- Consider implementing an exponential backoff strategy for production applications.

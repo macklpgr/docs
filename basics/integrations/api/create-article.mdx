@@ -1,0 +1,114 @@
+---
+title: "Create Article"
+api: "POST https://byword.ai/create_article"
+description: "Create a new article based on a domain's settings"
+---
+
+This endpoint creates a new article based on your domain-specific settings. The article content is generated using parameters defined in your domain configuration, such as language, tone, length, and other customizations.
+
+## Request
+
+<ParamField body="input" type="string" required>
+  The primary content input based on your selected mode:
+
+  - For "keyword" mode: The keyword to base the article on
+  - For "title" mode: The article title
+</ParamField>
+
+<ParamField body="mode" type="string" required>
+  Specifies the generation mode. Possible values:
+
+  - `keyword`: Generate an article based on a keyword
+  - `title`: Generate an article based on a title
+</ParamField>
+
+<ParamField body="key" type="string" required>
+  Your API key for authentication
+</ParamField>
+
+<ParamField body="domain" type="string" required>
+  The domain name (e.g., "example.com") to use for article settings.
+  Must be a domain associated with your account.
+</ParamField>
+
+## Response
+
+<ResponseField name="message" type="string">
+  A status message indicating success or failure
+</ResponseField>
+
+<ResponseField name="articleID" type="string">
+  The ID of the created article (returned only on success)
+</ResponseField>
+
+## How It Works
+
+1. The API validates your API key and checks if you have sufficient article credits
+2. It verifies that the specified domain exists and is associated with your account
+3. It retrieves domain-specific settings including:
+   - Language
+   - Tone of voice
+   - Custom formatting
+   - Target length
+   - Sitemap
+   - Undetectable settings
+   - Custom prompts
+4. It generates an article based on these settings and your input
+
+## Domain Settings
+
+All article parameters are taken from your domain settings, including:
+
+- **Language**: The article's language (defaults to English if not specified)
+- **Tone**: Writing style tone from domain settings
+- **Format**: Custom formatting style defined in domain settings
+- **Target Length**: Word count target for the article
+- **Undetectable**: Whether to optimize for AI detection avoidance
+- **Prompts**: Custom generation prompts defined in domain settings
+- **Sitemap**: Domain sitemap for content optimization
+
+## Examples
+
+### Request Example
+
+```json
+{
+  "input": "sustainable gardening",
+  "mode": "keyword",
+  "key": "your_api_key_here",
+  "domain": "example.com"
+}
+```
+
+### Success Response
+
+```json
+{
+  "message": "Article successfully created",
+  "articleID": "1234567890abcdef"
+}
+```
+
+### Error Response
+
+```json
+{
+  "message": "The domain you specified does not belong to this user"
+}
+```
+
+### Error Messages
+
+| Error Message | Description |
+| ------------- | ----------- |
+| "Please supply an input parameter" | The required `input` parameter is missing |
+| "Please supply a mode parameter" | The required `mode` parameter is missing |
+| "Please supply an API key" | The required `key` parameter is missing |
+| "Please supply a domain parameter" | The required `domain` parameter is missing |
+| "Please check the API key you're using, and try again" | Invalid API key |
+| "The user with this API key associated does not have any article credits remaining" | No article credits left |
+| "This user does not have any domains associated with their account" | No domains configured for this user |
+| "The domain you specified does not belong to this user" | Domain name not associated with user account |
+| "Please wait for your Unlimited account to be setup fully before calling the API" | Account setup is pending |
+| "Please ensure you've added your OpenAI token to https://byword.ai/unlimited, before calling this endpoint" | Missing OpenAI token for Unlimited accounts |
+| "Please ensure you've added your Replicate token to https://byword.ai/unlimited, before calling this endpoint" | Missing Replicate token for Unlimited accounts |

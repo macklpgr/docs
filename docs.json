@@ -7,9 +7,9 @@
   },
   "name": "Byword explained",
   "integrations": {
-      "posthog": {
-          "apiKey": "phc_dlthzNTtJetoTLXhRrTXWsParbsJJ1gOTxMx4Qc2Pcx"
-      }
+    "posthog": {
+      "apiKey": "phc_dlthzNTtJetoTLXhRrTXWsParbsJJ1gOTxMx4Qc2Pcx"
+    }
   },
   "colors": {
     "primary": "#357CFF",
@@ -73,7 +73,16 @@
                   "basics/integrations/webflow",
                   "basics/integrations/zapier",
                   "basics/integrations/shopify",
-                  "basics/integrations/api"
+                  {
+                    "group": "API",
+                    "icon": "code",
+                    "pages": [
+                      "basics/integrations/api/overview",
+                      "basics/integrations/api/create-article",
+                      "basics/integrations/api/get-article",
+                      "basics/integrations/api/list-articles"
+                    ]
+                  }
                 ]
               }
             ]

@@ -1,0 +1,85 @@
+---
+title: "List Articles"
+api: "POST https://api.byword.ai/list_articles"
+description: "Retrieve all articles created via the Create Article endpoint"
+---
+
+This endpoint allows you to retrieve all articles created via Create Article.
+
+## Request
+
+<ParamField body="key" type="string" required>
+  Your Byword API key. Can be found at https://byword.ai/integrations_api.
+</ParamField>
+
+<ParamField body="cursor" default="0" type="integer">
+  Not required - use only if you're dealing with \> 100 articles, and want to specify the starting point from which to retrieve the next 100 articles.
+</ParamField>
+
+<ParamField body="newest" default="false" type="boolean">
+  Not required - set to `true` if you want Byword to return the most recent articles first.
+</ParamField>
+
+<ParamField body="mode" default="API" type="string">
+  Choose whether you want to retrieve articles created inside of the API (`API`), or by the associated user in the UI (`UI`).
+</ParamField>
+
+## Pagination
+
+Note that if you are retrieving 100 articles or less, then you do not need to specify a cursor (or you can just specify it as 0).
+
+If you have more than 100 articles associated with your API key, then by default this endpoint will return your first 100 articles (ranked by ascending creation date). The cursor parameter allows you to paginate through results.
+
+Let's say you have 200 articles associated with your API key. The cursor parameter specifies the starting point from which the endpoint will return your articles:
+
+- If cursor is blank, or 0, it will return articles 0 to 99.
+- If cursor is set to 50, it will return articles 50 to 149.
+
+The most efficient way to iterate through a large number of articles would be to make separate API calls, where cursor is set to an integer multiple of 100. In the example above, this would involve one call with `cursor=0` and another with `cursor=100`. These two calls combined would return all 200 articles.
+
+## Examples
+
+### Request Example
+
+```json
+{
+  "key": "your_api_key_here",
+  "cursor": 0,
+  "newest": false,
+  "mode": "API"
+}
+```
+
+### Success Response
+
+```json
+{
+  "articles": [
+    {
+      "id": "1234567890abcdef",
+      "title": "Sample Article Title 1",
+      "status": "complete",
+      "wordCount": 1500,
+      "createdAt": "2025-03-24T10:30:00Z"
+    },
+    {
+      "id": "abcdef1234567890",
+      "title": "Sample Article Title 2",
+      "status": "complete",
+      "wordCount": 1200,
+      "createdAt": "2025-03-25T11:45:00Z"
+    }
+    // ... more articles
+  ],
+  "count": 100,
+  "totalCount": 230,
+  "nextCursor": 100
+}
+```
+
+### Implementation Notes
+
+- The endpoint returns up to 100 articles per request.
+- For paginated requests, use the returned `nextCursor` value for subsequent requests.
+- Set `newest` to `true` to get the most recently created articles first.
+- The `mode` parameter lets you choose between articles created via API or through the UI.
